@@ -96,7 +96,7 @@ app.post("/addspace", async (req, res) => {
     name: req.body.name,
 	addr: req.body.addr,
 	capacity: req.body.capacity,
-	userassociated: global.currentusername
+	username: global.currentusername
 	});
 	
 	return res.status(200).json(space);
