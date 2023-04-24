@@ -32,7 +32,7 @@ var Space = new Schema({
 		type: Number,
 		required: true
 	},
-	username:{
+	usernamea:{
 		type: String,
 		required: true
 	}

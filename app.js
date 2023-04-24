@@ -93,9 +93,15 @@ app.post("/login", async function(req, res){
 });
 app.post("/addspace", async (req, res) => {
 	const space = await Space.create({
-    addr: {country:req.body.addr.country,state:req.body.addr.state,district:req.body.addr.district,street:req.body.addr.street,propertynumber:req.body.addr.propertynumber,postalcode:req.body.addr.postalcode},
+    addr: {
+		country: req.body.country,
+		state:req.body.state,
+		district:req.body.district,
+		street:req.body.street,
+		propertynumber:req.body.propertynumber,
+		postalcode:req.body.postalcode},
 	capacity: req.body.capacity,
-	username: global.currentusername
+	usernamea: global.currentusername
 	});
 	
 	return res.status(200).json(space);
