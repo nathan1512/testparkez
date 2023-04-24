@@ -93,8 +93,7 @@ app.post("/login", async function(req, res){
 });
 app.post("/addspace", async (req, res) => {
 	const space = await Space.create({
-    name: req.body.name,
-	addr: req.body.addr,
+    addr: (req.body.addr.country,req.body.addr.state,req.body.addr.district,req.body.addr.street,req.body.addr.propertynumber,req.body.addr.postalcode),
 	capacity: req.body.capacity,
 	username: global.currentusername
 	});
